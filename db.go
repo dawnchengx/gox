@@ -3,10 +3,10 @@ package gox
 import (
     "fmt"
     "database/sql"
-    "database/sql/driver"
+    _ "github.com/go-sql-driver/mysql"
 )
 
 var (
-    DbType = "mysql"
-    Link = ""
+    DBType = "mysql"
+    DBconfig = ""
 )
