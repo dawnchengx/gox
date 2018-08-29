@@ -1,12 +1,19 @@
 package gox
 
 import (
-    "fmt"
     "database/sql"
     _ "github.com/go-sql-driver/mysql"
 )
 
 var (
-    DBType = "mysql"
+    DBtype = "mysql"
     DBconfig = ""
 )
+
+func DBconn() *sql.DB {
+   db, err := sql.Open(DBtype, DBconfig)
+    if err != nil{
+        panic(err.Error())
+    }
+    return db
+}
