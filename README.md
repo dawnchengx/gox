@@ -61,8 +61,8 @@ func redisGet(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-    gox.DBconfig= "root:chr@911225@/test?charset=utf8"
-    gox.InitConn("tcp", "127.0.0.1:6379", "chr@911225")
+    gox.DBconfig= "root:password/test?charset=utf8"
+    gox.InitConn("tcp", "127.0.0.1:6379", "redisAuth")
     gox.Handle("/ping", ping)
     gox.Handle("/query", query)
     gox.Handle("/get", redisGet)
