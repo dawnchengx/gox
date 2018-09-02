@@ -2,6 +2,7 @@
 它是一个很简洁的golang框架，为快速集成业务而写
 
 # demo
+```
 package main
 
 import (
@@ -67,3 +68,4 @@ func main() {
     gox.Handle("/get", redisGet)
     gox.Run(":1324")
 }
+```
